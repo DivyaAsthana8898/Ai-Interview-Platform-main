@@ -1,0 +1,766 @@
+/* =========================
+   Voice Interview Page
+========================= */
+
+.voice-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* =========================
+   Header
+========================= */
+
+.voice-header {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.voice-eyebrow {
+  margin: 0 0 8px;
+
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.voice-header h1 {
+  margin: 0 0 8px;
+
+  color: #f8fafc;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.voice-header p {
+  margin: 0;
+
+  color: #94a3b8;
+}
+
+.voice-exit {
+  padding: 11px 18px;
+
+  border: 1px solid #475569;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #cbd5e1;
+
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.voice-exit:hover {
+  background: #1e293b;
+  border-color: #64748b;
+}
+
+/* =========================
+   Progress
+========================= */
+
+.voice-progress-card {
+  max-width: 1000px;
+  margin: 0 auto 20px;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.voice-progress-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 12px;
+
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.progress-question-text {
+  display: inline-block;
+
+  white-space: nowrap;
+
+  color: #ffffff;
+}
+
+.progress-question-text strong {
+  color: #ffffff;
+}
+
+.progress-percentage {
+  display: inline-block;
+
+  white-space: nowrap;
+
+  color: #60a5fa;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.voice-progress-info {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  color: #cbd5e1;
+}
+
+.voice-progress-info strong {
+  color: #60a5fa;
+}
+
+.voice-progress-track {
+  width: 100%;
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #0f172a;
+}
+
+.voice-progress-fill {
+  height: 100%;
+
+  border-radius: 20px;
+
+  background: #2563eb;
+
+  transition: width 0.5s ease;
+}
+
+/* =========================
+   Question Card
+========================= */
+
+.voice-question-card {
+  max-width: 1000px;
+  margin: 20px auto;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+
+  box-sizing: border-box;
+}
+
+/* Question top */
+
+.voice-question-top {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.voice-question-number {
+  display: inline-block;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+  color: #2563eb;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.voice-difficulty {
+  display: inline-block;
+
+  padding: 8px 15px;
+
+  border-radius: 20px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* Question text */
+
+.voice-question-card h2,
+.voice-question-text {
+  display: block;
+
+  margin: 0 0 25px;
+  padding: 0;
+
+  background: transparent;
+
+  color: #ffffff !important;
+
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.55;
+
+  text-align: center;
+
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Speak question button */
+
+.speak-question-btn {
+  padding: 11px 17px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #334155;
+  color: #f8fafc;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.speak-question-btn:hover {
+  background: #475569;
+}
+
+/* =========================
+   Answer Card
+========================= */
+
+.voice-answer-card {
+  max-width: 1000px;
+  margin: 20px auto;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   Voice Status
+========================= */
+
+.voice-status {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 20px;
+}
+
+.microphone {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0f172a;
+
+  font-size: 28px;
+}
+
+.microphone.active {
+  animation: microphone-pulse 1.2s infinite;
+}
+
+.voice-status h3 {
+  margin: 0 0 5px;
+
+  color: #f8fafc;
+}
+
+.voice-status p {
+  margin: 0;
+
+  color: #94a3b8;
+}
+
+/* =========================
+   Microphone Animation
+========================= */
+
+@keyframes microphone-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   Transcript
+========================= */
+
+.transcript-box {
+  min-height: 160px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+
+  background: #0f172a;
+  border: 1px solid #334155;
+
+  box-sizing: border-box;
+}
+
+.transcript-box p {
+  margin: 0;
+
+  color: #e2e8f0;
+
+  line-height: 1.7;
+
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.transcript-box span {
+  color: #64748b;
+}
+
+/* =========================
+   Transcript Textarea
+========================= */
+
+.transcript-box textarea {
+  width: 100%;
+  min-height: 160px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #475569;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #020617;
+  color: #f8fafc;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.7;
+
+  resize: vertical;
+}
+
+.transcript-box textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.transcript-box textarea::placeholder {
+  color: #64748b;
+}
+
+/* =========================
+   Voice Controls
+========================= */
+
+.voice-controls {
+  display: flex;
+
+  gap: 15px;
+}
+
+.start-speaking-btn,
+.stop-speaking-btn,
+.submit-voice-btn {
+  flex: 1;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.start-speaking-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.start-speaking-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.stop-speaking-btn {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.stop-speaking-btn:hover:not(:disabled) {
+  background: #b91c1c;
+}
+
+.submit-voice-btn {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.submit-voice-btn:hover:not(:disabled) {
+  background: #15803d;
+}
+
+.start-speaking-btn:disabled,
+.stop-speaking-btn:disabled,
+.submit-voice-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =========================
+   Evaluation
+========================= */
+
+.voice-evaluation {
+  max-width: 1000px;
+  margin: 20px auto;
+
+  display: flex;
+
+  gap: 25px;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+
+  box-sizing: border-box;
+}
+
+.evaluation-score {
+  min-width: 130px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid #334155;
+}
+
+.evaluation-score span {
+  color: #94a3b8;
+}
+
+.evaluation-score strong {
+  margin-top: 8px;
+
+  color: #4ade80;
+
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.evaluation-content {
+  flex: 1;
+}
+
+.evaluation-content h3 {
+  margin-top: 0;
+
+  color: #f8fafc;
+}
+
+.evaluation-content p {
+  color: #cbd5e1;
+
+  line-height: 1.7;
+}
+
+.evaluation-content h4 {
+  margin-bottom: 8px;
+
+  color: #f8fafc;
+}
+
+.evaluation-content ul {
+  padding-left: 20px;
+
+  color: #cbd5e1;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   Error
+========================= */
+
+.voice-inline-error {
+  max-width: 1000px;
+
+  margin: 20px auto;
+
+  padding: 15px 18px;
+
+  border-radius: 10px;
+
+  background: #450a0a;
+  border: 1px solid #7f1d1d;
+
+  color: #fca5a5;
+
+  font-weight: 600;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   Loading / Error Page
+========================= */
+
+.voice-loading,
+.voice-error {
+  max-width: 600px;
+
+  margin: 100px auto;
+
+  padding: 40px;
+
+  text-align: center;
+
+  border-radius: 18px;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+
+  box-sizing: border-box;
+}
+
+.voice-loading h2,
+.voice-error h2 {
+  color: #f8fafc;
+}
+
+.voice-loading p {
+  color: #94a3b8;
+}
+
+.voice-spinner {
+  width: 45px;
+  height: 45px;
+
+  margin: 0 auto 20px;
+
+  border: 4px solid #334155;
+  border-top-color: #2563eb;
+
+  border-radius: 50%;
+
+  animation: voice-spin 1s linear infinite;
+}
+
+@keyframes voice-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.voice-error p {
+  color: #f87171;
+
+  margin: 20px 0;
+}
+
+.voice-error button {
+  padding: 11px 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 700px) {
+  .voice-page {
+    padding: 20px;
+  }
+
+  .voice-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .voice-header h1 {
+    font-size: 28px;
+  }
+
+  .voice-progress-header {
+    gap: 10px;
+
+    font-size: 15px;
+  }
+
+  .progress-percentage {
+    font-size: 17px;
+  }
+
+  .voice-question-card {
+    padding: 22px;
+  }
+
+  .voice-question-top {
+    gap: 10px;
+  }
+
+  .voice-question-number {
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+
+  .voice-difficulty {
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+
+  .voice-question-card h2,
+  .voice-question-text {
+    font-size: 20px;
+  }
+
+  .voice-answer-card {
+    padding: 22px;
+  }
+
+  .voice-controls {
+    flex-direction: column;
+  }
+
+  .voice-evaluation {
+    flex-direction: column;
+  }
+
+  .evaluation-score {
+    border-right: none;
+
+    border-bottom: 1px solid #334155;
+
+    padding-bottom: 20px;
+  }
+
+  .microphone.active {
+    animation: microphone-pulse 1s infinite;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 450px) {
+  .voice-page {
+    padding: 15px;
+  }
+
+  .voice-progress-card,
+  .voice-question-card,
+  .voice-answer-card,
+  .voice-evaluation {
+    padding: 18px;
+  }
+
+  .voice-progress-header {
+    flex-wrap: wrap;
+  }
+
+  .voice-question-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .voice-question-text,
+  .voice-question-card h2 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .voice-status {
+    align-items: flex-start;
+  }
+
+  .transcript-box {
+    min-height: 130px;
+  }
+
+  .transcript-box textarea {
+    min-height: 130px;
+  }
+}
